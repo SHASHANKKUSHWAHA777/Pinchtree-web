@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | PinchTree</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .sketch-border {
+      border: 2px solid black;
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sketch-hover:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 8px 8px 0px black;
+    }
+
+    .sketch-input {
+      border: 2px solid black;
+      border-radius: 12px;
+      padding: 12px;
+      width: 100%;
+      outline: none;
+      font-weight: 600;
+    }
+
+    .sketch-input:focus {
+      box-shadow: 3px 3px 0px black;
+    }
+
+    .sketch-btn {
+      border: 2px solid black;
+      box-shadow: 3px 3px 0px black;
+      transition: 0.2s;
+    }
+
+    .sketch-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0px black;
+    }
+
+    .sketch-btn:active {
+      transform: translate(0px, 0px);
+      box-shadow: 2px 2px 0px black;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <div id="navbar-placeholder"></div>
+  <script src="navbar.js" defer></script>
+
+  <main class="px-6 py-16 max-w-4xl mx-auto">
+    
+    <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Contact Us</h1>
+
+    <p class="mt-6 text-lg font-medium leading-relaxed italic">
+      Want to collaborate, invest, or partner with PinchTree? Drop us a message.
+    </p>
+
+    <section class="mt-10 sketch-border sketch-hover p-1 md:p-8 bg-white">
+      <form onsubmit="handleSubmit(event)" class="p-4 md:p-2">
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="font-bold uppercase text-sm">Full Name</label>
+            <input 
+              id="name"
+              name="fullname"
+              type="text"
+              class="sketch-input mt-2"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email" class="font-bold uppercase text-sm">Email</label>
+            <input 
+              id="email"
+              name="email"
+              type="email"
+              class="sketch-input mt-2"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <label for="message" class="font-bold uppercase text-sm">Message</label>
+          <textarea 
+            id="message"
+            name="message"
+            class="sketch-input mt-2 h-32 resize-none"
+            placeholder="Write your message..."
+            required
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          id="submit-btn"
+          class="sketch-btn mt-6 px-8 py-3 bg-black text-white font-bold uppercase rounded-xl"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <section class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="mailto:info@pinchtree.com" class="sketch-border sketch-hover p-6 flex flex-col gap-2 bg-white">
+        <span class="text-xs font-black uppercase tracking-tighter bg-black text-white px-2 py-0.5 w-fit rounded">Primary</span>
+        <h3 class="text-lg font-black uppercase mt-2">Email</h3>
+        <p class="font-bold text-sm truncate">info@pinchtree.com</p>
+      </a>
+
+      <a href="https://www.linkedin.com" class="sketch-border sketch-hover p-6 flex flex-col gap-2 bg-white">
+        <h3 class="text-lg font-black uppercase">LinkedIn</h3>
+        <p class="font-bold text-sm">/company/pinchtree</p>
+      </a>
+
+      <a href="https://www.github.com" class="sketch-border sketch-hover p-6 flex flex-col gap-2 bg-white">
+        <h3 class="text-lg font-black uppercase">GitHub</h3>
+        <p class="font-bold text-sm">/pinchtree-labs</p>
+      </a>
+
+      <a href="https://wa.me/yournumber" class="sketch-border sketch-hover p-6 flex flex-col gap-2 bg-white">
+        <h3 class="text-lg font-black uppercase text-black">WhatsApp</h3>
+        <p class="font-bold text-sm">+91 [Number]</p>
+      </a>
+
+      <a href="https://www.instagram.com" class="sketch-border sketch-hover p-6 flex flex-col gap-2 bg-white">
+        <h3 class="text-lg font-black uppercase">Instagram</h3>
+        <p class="font-bold text-sm">@pinchtree_official</p>
+      </a>
+
+      <a href="https://www.twitter.com" class="sketch-border sketch-hover p-6 flex flex-col gap-2 bg-white">
+        <h3 class="text-lg font-black uppercase">Twitter / X</h3>
+        <p class="font-bold text-sm">@pinchtree_x</p>
+      </a>
+    </section>
+
+    <div class="sketch-border sketch-hover mt-8 p-4 bg-gray-50 flex items-center justify-between">
+      <span class="font-black uppercase italic text-sm">Current Node: India</span>
+      <span class="font-bold text-xs uppercase opacity-50">Status: Launching Soon</span>
+    </div>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="footer.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+
+    const _supabaseUrl = 'https://kytrenuweiavkjikhadh.supabase.co'; 
+    const _supabaseKey = 'sb_publishable_cBUfMDcD83I5QxoGf6__Qw_oObW8hBy';
+    const _supabase = supabase.createClient(_supabaseUrl, _supabaseKey);
+
+
+    async function handleSubmit(event) {
+      event.preventDefault(); 
+      
+      const btn = document.getElementById('submit-btn');
+      const originalText = btn.innerText;
+      
+      btn.innerText = 'SENDING TO MATRIX...';
+      btn.disabled = true;
+
+      const formData = new FormData(event.target);
+      
+      const payload = {
+        name: formData.get('fullname'), 
+        email: formData.get('email'),
+        message: formData.get('message')
+      };
+
+      try {
+        const { error } = await _supabase
+          .from('contact_queries')
+          .insert([payload]);
+
+        if (error) throw error;
+
+        alert('Success! Data Matrix mein store ho gaya. ✅');
+        event.target.reset(); 
+        btn.innerText = 'SENT!';
+        
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.disabled = false;
+        }, 3000);
+
+      } catch (err) {
+        alert('System Error: ' + err.message);
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>

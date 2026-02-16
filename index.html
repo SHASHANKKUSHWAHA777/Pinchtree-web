@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PinchTree | Defence & Medical Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .sketch-border {
+      border: 2px solid black;
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sketch-hover:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 8px 8px 0px black;
+    }
+
+    .sketch-btn {
+      border: 2px solid black;
+      box-shadow: 3px 3px 0px black;
+      transition: 0.2s;
+    }
+
+    .sketch-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0px black;
+    }
+
+    .sketch-btn:active {
+      transform: translate(0px, 0px);
+      box-shadow: 2px 2px 0px black;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script src="navbar.js" defer></script>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden px-6 py-4 border-b-2 border-black">
+    <div class="flex flex-col gap-4 font-bold uppercase text-sm">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <main>
+
+    
+    <section class="px-6 py-14 md:py-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+      <div>
+        <h1 class="text-4xl md:text-6xl font-black leading-tight uppercase">
+          Defence & Medical<br />
+          Solutions
+        </h1>
+
+        <p class="mt-6 text-lg md:text-xl font-medium leading-relaxed">
+          PinchTree builds unique products that solve critical safety challenges
+          in defence operations, medical emergencies, and public protection.
+        </p>
+
+        <div class="mt-8 flex gap-4 flex-wrap">
+          <a href="services.html" class="sketch-btn px-6 py-3 font-bold uppercase bg-white rounded-xl">
+            Explore Services
+          </a>
+
+          <a href="contact.html" class="sketch-btn px-6 py-3 font-bold uppercase bg-black text-white rounded-xl">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!--img block-->
+      <div class="sketch-border sketch-hover p-8 bg-white text-center">
+        <div class="font-black text-2xl uppercase">PinchTree.com</div>
+
+        <img 
+          src="santaimg.png" 
+          alt="PinchTree Illustration"
+          class="mt-6 w-full max-w-xs mx-auto"
+        />
+
+        <p class="mt-4 font-semibold">
+          Smart Safety. Real Impact.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Why Us -->
+    <section class="px-6 py-14 max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black uppercase mb-10">Why PinchTree?</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="sketch-border sketch-hover p-6">
+          <h3 class="font-black uppercase text-xl">Mission Focused</h3>
+          <p class="mt-3 font-medium leading-relaxed">
+            Products designed for real-world defence & emergency use.
+          </p>
+        </div>
+
+        <div class="sketch-border sketch-hover p-6">
+          <h3 class="font-black uppercase text-xl">Affordable Innovation</h3>
+          <p class="mt-3 font-medium leading-relaxed">
+            High-performance solutions at accessible cost.
+          </p>
+        </div>
+
+        <div class="sketch-border sketch-hover p-6">
+          <h3 class="font-black uppercase text-xl">Fast Deployment</h3>
+          <p class="mt-3 font-medium leading-relaxed">
+            Modular designs that can be deployed quickly.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!--footer-->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js" defer></script>
+
+  <!-- Mobile Menu Toggle Fix -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  </script>
+
+</body>
+</html>

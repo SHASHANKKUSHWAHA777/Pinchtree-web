@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | PinchTree</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .sketch-border {
+      border: 2px solid black;
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sketch-hover:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 8px 8px 0px black;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script src="navbar.js" defer></script>
+
+  <!-- About Section -->
+  <main class="px-6 py-16 max-w-5xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-black uppercase">
+      About PinchTree
+    </h1>
+
+    <p class="mt-6 text-lg font-medium leading-relaxed">
+      PinchTree is a product innovation startup founded by 5 founders, focused on building
+      unique solutions for the defence and medical sectors.
+    </p>
+
+    
+    <section class="mt-10 grid md:grid-cols-2 gap-8">
+      
+      <div class="sketch-border sketch-hover p-6">
+        <h2 class="text-2xl font-black uppercase">Our Mission</h2>
+        <p class="mt-3 font-medium leading-relaxed">
+          To build smart, affordable, and reliable products that protect lives and strengthen
+          public safety.
+        </p>
+      </div>
+
+      <div class="sketch-border sketch-hover p-6">
+        <h2 class="text-2xl font-black uppercase">Our Vision</h2>
+        <p class="mt-3 font-medium leading-relaxed">
+          To become India’s most trusted defence & medical innovation brand.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="mt-10 sketch-border sketch-hover p-6">
+      <h2 class="text-2xl font-black uppercase">What Makes Us Different?</h2>
+
+      <ul class="mt-4 list-disc ml-6 font-semibold space-y-2">
+        <li>Dual focus: Defence + Medical</li>
+        <li>Real-world product engineering mindset</li>
+        <li>Built for rugged environments</li>
+        <li>Modular and scalable systems</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+   <div id="footer-placeholder"></div>
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Products - PinchTree</title>
+    <style>
+        .sketch-border { border: 2px solid black; border-radius: 18px; box-shadow: 4px 4px 0px black; transition: all 0.3s ease-in-out; }
+        .sketch-hover:hover { transform: translateY(-10px) scale(1.02); box-shadow: 8px 8px 0px black; }
+        .nav-item { position: relative; font-weight: 700; text-transform: uppercase; color: black; padding-bottom: 4px; }
+        .nav-item::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background-color: black; transition: width 0.4s ease-out; }
+        .nav-item:hover::after { width: 100%; }
+        .active-link::after { width: 100% !important; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="navbar-placeholder"></div>
+
+    <main class="p-10 max-w-7xl mx-auto">
+        <header class="mb-12 text-center">
+            <h1 class="text-6xl font-black uppercase italic tracking-tighter">The Product Lab</h1>
+            <p class="mt-4 font-bold text-gray-600 uppercase">Proprietary tools built for the next-gen web.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="sketch-border sketch-hover p-6 bg-white flex flex-col justify-between">
+                <div>
+                    <div class="h-40 bg-gray-200 rounded-xl mb-4 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="crw_white.jpg" alt="crowdimg"> </div>
+                    <h2 class="text-2xl font-black uppercase">SafeCrowd</h2>
+                    <p class="mt-2 font-semibold text-gray-700">AI-powered crowd monitoring and anomaly detection system to prevent stampedes, panic situations, and security threats.</p>
+                    <div class="mt-4 flex gap-2">
+                        <span class="bg-black text-white text-[10px] px-2 py-1 uppercase font-bold">Security</span>
+                        <span class="bg-yellow-400 text-black text-[10px] px-2 py-1 uppercase font-bold">Beta</span>
+                    </div>
+                </div>
+                <button onclick="window.location.href='contact.html'" class=" mt-8 border-2 border-black p-3 font-black uppercase hover:bg-black hover:text-white transition-all">Know more</button>
+            </div>
+
+            <div class="sketch-border sketch-hover p-6 bg-white flex flex-col justify-between overflow-hidden">
+    <div>
+        <div class="h-40 w-full bg-gray-200 rounded-xl mb-4 border-2 border-black flex items-center justify-center overflow-hidden">
+            <img src="bluet_white.jpg" alt="bluetoothimg" class="w-full h-full object-cover">
+        </div>
+        <h2 class="text-2xl font-black uppercase">Bluechat</h2>
+        <p class="mt-2 font-semibold text-gray-700">Secured communication just using Bluetooth</p>
+    </div>
+    <button onclick="window.location.href='services.html'" class="mt-8 border-2 border-black p-3 font-black uppercase hover:bg-black hover:text-white transition-all">Services</button>
+</div>
+
+<div class="sketch-border sketch-hover p-6 bg-white flex flex-col justify-between overflow-hidden">
+    <div>
+        <div class="h-40 w-full bg-gray-200 rounded-xl mb-4 border-2 border-black flex items-center justify-center overflow-hidden">
+            <img src="inq_white.jpg" alt="inquiryimg" class="w-full h-full object-cover">
+        </div>
+        <h2 class="text-2xl font-black uppercase">Upcoming Projects</h2>
+        <p class="mt-2 font-semibold text-gray-700">We can build for you, our next product</p>
+    </div>
+    <button onclick="window.location.href='contact.html'" class="mt-8 border-2 border-black p-3 font-black uppercase hover:bg-black hover:text-white transition-all">Contact us</button>
+</div>
+
+        </div>
+    </main>
+
+    <script src="navbar.js"></script>
+    <!--footer-->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

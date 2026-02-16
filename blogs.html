@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs | PinchTree</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .sketch-border {
+      border: 2px solid black;
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sketch-hover:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 8px 8px 0px black;
+    }
+
+    .sketch-btn {
+      border: 2px solid black;
+      box-shadow: 3px 3px 0px black;
+      transition: 0.2s;
+    }
+
+    .sketch-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0px black;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script src="navbar.js" defer></script>
+
+  <main class="px-6 py-16 max-w-6xl mx-auto">
+
+    <!-- Blog List -->
+    <div id="blogList">
+      <h1 class="text-4xl md:text-5xl font-black uppercase">PinchTree Blogs</h1>
+
+      <p class="mt-6 text-lg font-medium leading-relaxed max-w-3xl">
+        Insights, research, and innovation updates from PinchTree. Defence technology, medical safety,
+        AI monitoring systems and public protection.
+      </p>
+
+      <section class="mt-12 grid md:grid-cols-3 gap-8">
+
+        <!-- Blog 1 -->
+        <div class="sketch-border sketch-hover p-6">
+          <p class="font-bold uppercase text-sm">Public Safety</p>
+          <h2 class="mt-3 text-xl font-black uppercase">
+            How AI Can Prevent Stampedes in India
+          </h2>
+          <p class="mt-3 font-medium leading-relaxed">
+            AI-based crowd anomaly detection can identify panic waves and abnormal movement before disaster.
+          </p>
+
+          <button onclick="openBlog('blog1')" class="sketch-btn mt-5 px-5 py-2 rounded-xl font-bold uppercase bg-black text-white">
+            Read More
+          </button>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="sketch-border sketch-hover p-6">
+          <p class="font-bold uppercase text-sm">Medical Innovation</p>
+          <h2 class="mt-3 text-xl font-black uppercase">
+            Smart Hospitals: Future of Indian Healthcare
+          </h2>
+          <p class="mt-3 font-medium leading-relaxed">
+            Smart monitoring can reduce patient deaths by improving emergency response time.
+          </p>
+
+          <button onclick="openBlog('blog2')" class="sketch-btn mt-5 px-5 py-2 rounded-xl font-bold uppercase bg-black text-white">
+            Read More
+          </button>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="sketch-border sketch-hover p-6">
+          <p class="font-bold uppercase text-sm">Defence Technology</p>
+          <h2 class="mt-3 text-xl font-black uppercase">
+            Why Threat Detection Systems Matter in Convoy Safety
+          </h2>
+          <p class="mt-3 font-medium leading-relaxed">
+            Convoy safety requires early detection. AI vision can detect threats from long distance.
+          </p>
+
+          <button onclick="openBlog('blog3')" class="sketch-btn mt-5 px-5 py-2 rounded-xl font-bold uppercase bg-black text-white">
+            Read More
+          </button>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Blogs -->
+    <div id="blogContent" class="hidden mt-10">
+
+      <button onclick="goBack()" class="sketch-btn px-5 py-2 rounded-xl font-bold uppercase bg-white">
+        ← Back to Blogs
+      </button>
+
+      <!-- Blog 1 -->
+      <article id="blog1" class="hidden mt-10 sketch-border p-8">
+        <h1 class="text-3xl md:text-4xl font-black uppercase">
+          How AI Can Prevent Stampedes in India
+        </h1>
+
+        <p class="mt-3 font-semibold text-sm uppercase">
+          Public Safety | PinchTree Team | 2026
+        </p>
+
+        <p class="mt-6 text-lg font-medium leading-relaxed">
+          Stampedes are one of the biggest public safety threats in India. Festivals, rallies, religious gatherings,
+          and stadium events can turn deadly when crowd movement becomes uncontrollable.
+        </p>
+
+        <h2 class="mt-8 text-2xl font-black uppercase">Why Stampedes Happen</h2>
+        <ul class="mt-4 list-disc ml-6 font-semibold space-y-2">
+          <li>Sudden panic wave or rumor</li>
+          <li>Overcrowded gates</li>
+          <li>Unplanned crowd flow</li>
+          <li>Security incident</li>
+        </ul>
+
+        <h2 class="mt-8 text-2xl font-black uppercase">How AI Solves It</h2>
+        <p class="mt-4 font-medium leading-relaxed">
+          AI can analyze CCTV feeds in real time, detect abnormal movement patterns, panic waves, or sudden running.
+          This allows authorities to act before the stampede starts.
+        </p>
+
+        <h2 class="mt-8 text-2xl font-black uppercase">PinchTree SafeCrowd</h2>
+        <p class="mt-4 font-medium leading-relaxed">
+          SafeCrowd is designed to monitor crowd density, detect anomalies, and send real-time alerts for fast action.
+        </p>
+      </article>
+
+      <!-- Blog 2 -->
+      <article id="blog2" class="hidden mt-10 sketch-border p-8">
+        <h1 class="text-3xl md:text-4xl font-black uppercase">
+          Smart Hospitals: Future of Indian Healthcare
+        </h1>
+
+        <p class="mt-3 font-semibold text-sm uppercase">
+          Medical Sector | PinchTree Team | 2026
+        </p>
+
+        <p class="mt-6 text-lg font-medium leading-relaxed">
+          Indian hospitals face staff shortages, overcrowding, and delayed emergency responses. Smart monitoring systems
+          can solve these issues using IoT + AI.
+        </p>
+
+        <h2 class="mt-8 text-2xl font-black uppercase">What is a Smart Hospital?</h2>
+        <ul class="mt-4 list-disc ml-6 font-semibold space-y-2">
+          <li>Patient vitals monitoring</li>
+          <li>Emergency alert dashboard</li>
+          <li>Staff tracking and response timing</li>
+          <li>Fall detection systems</li>
+        </ul>
+
+        <p class="mt-6 font-medium leading-relaxed">
+          The future of healthcare is real-time intelligence, not just treatment.
+        </p>
+      </article>
+
+      <!-- Blog 3 -->
+      <article id="blog3" class="hidden mt-10 sketch-border p-8">
+        <h1 class="text-3xl md:text-4xl font-black uppercase">
+          Why Threat Detection Systems Matter in Convoy Safety
+        </h1>
+
+        <p class="mt-3 font-semibold text-sm uppercase">
+          Defence Sector | PinchTree Team | 2026
+        </p>
+
+        <p class="mt-6 text-lg font-medium leading-relaxed">
+          Defence convoys face threats like ambush, hijacking, kidnapping attempts and road block attacks.
+          AI-based vision systems can detect threats early and send alerts.
+        </p>
+
+        <h2 class="mt-8 text-2xl font-black uppercase">Key Threats</h2>
+        <ul class="mt-4 list-disc ml-6 font-semibold space-y-2">
+          <li>Weapons and sharp objects detection</li>
+          <li>Suspicious group activity</li>
+          <li>Abnormal vehicle movement</li>
+          <li>Road barricade detection</li>
+        </ul>
+
+        <p class="mt-6 font-medium leading-relaxed">
+          PinchTree aims to build rugged convoy protection systems designed for Indian defence environments.
+        </p>
+      </article>
+
+    </div>
+
+  </main>
+<div id="footer-placeholder"></div>
+  <script src="footer.js" defer></script>
+
+
+  <script>
+    function openBlog(blogId) {
+      document.getElementById("blogList").classList.add("hidden");
+      document.getElementById("blogContent").classList.remove("hidden");
+
+      const blogs = ["blog1", "blog2", "blog3"];
+      blogs.forEach(id => document.getElementById(id).classList.add("hidden"));
+
+      document.getElementById(blogId).classList.remove("hidden");
+
+      window.scrollTo(0, 0);
+    }
+
+    function goBack() {
+      document.getElementById("blogContent").classList.add("hidden");
+      document.getElementById("blogList").classList.remove("hidden");
+
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
